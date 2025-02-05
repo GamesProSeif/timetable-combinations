@@ -85,7 +85,9 @@ export default function FilterField({
 	getValues: UseFormGetValues<FormSchema>;
 	setValue: UseFormSetValue<FormSchema>;
 }) {
-	const [selectedFilter, setSelectedFilter] = useState<typeof filters[number]>(filters[0]);
+	const [selectedFilter, setSelectedFilter] = useState<typeof filters[number]>(() => filters.find(f =>
+		f.value === (getValues(`filters.${filterIndex}.name`) || "no-clash")
+	)!);
 
 	function onSelect(newValue: string) {
 		const oldFilter = selectedFilter;

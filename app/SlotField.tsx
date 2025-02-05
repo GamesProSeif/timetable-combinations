@@ -101,6 +101,7 @@ export default function SlotField({
 								<Tooltip>
 									<TooltipTrigger
 										style={{ cursor: "default" }}
+										type="button"
 									>
 										<div className="flex gap-2 items-center">
 											<FormLabel>Group</FormLabel>
@@ -207,6 +208,7 @@ export default function SlotField({
 								<Tooltip>
 									<TooltipTrigger
 										style={{ cursor: "default" }}
+										type="button"
 									>
 										<div className="flex gap-2 items-center">
 											<FormLabel>Hide</FormLabel>
